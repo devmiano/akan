@@ -1,15 +1,19 @@
 @use 'base';
 
 .container {
+  background-color: base.$light;
   width: 80%;
   height: 90%;
-  background-color: base.$light;
   float: right;
   margin: 2rem;
   padding: 2rem;
   display: flex;
 
   .left {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     .title {
       font-family: base.$playfair;
       font-weight: 900;
@@ -23,6 +27,18 @@
       }
       .effect {
         font-family: base.$playfair;
+        color: base.$maroon;
+      }
+    }
+
+    .text {
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      color: base.$choco;
+
+      .bold {
+        font-weight: 700;
         color: base.$maroon;
       }
     }
