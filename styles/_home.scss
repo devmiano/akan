@@ -65,5 +65,18 @@
         }
       }
     }
+
+    .message {
+      width: 60%;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      color: base.$brown;
+
+      .bold {
+        color: base.$orange;
+        font-weight: 700;
+      }
+    }
   }
 }
