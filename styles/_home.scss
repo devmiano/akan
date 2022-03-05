@@ -1,0 +1,33 @@
+@use 'base';
+
+.container {
+  width: 80%;
+  height: 90%;
+  background-color: base.$light;
+  float: right;
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+
+  .left {
+    .title {
+      font-family: base.$playfair;
+      font-weight: 900;
+      font-size: 7rem;
+      line-height: 7rem;
+      color: base.$brown;
+
+      .akan {
+        font-family: base.$playfair;
+        color: base.$orange;
+      }
+      .effect {
+        font-family: base.$playfair;
+        color: base.$maroon;
+      }
+    }
+  }
+
+  .right {
+  }
+}
