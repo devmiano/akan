@@ -1,3 +1,8 @@
+// Function to refresh the form after submition
+function formReset() {
+  document.getElementById('form_data').reset();
+}
+
 function akanForm() {
   var gender = document.getElementById('gender').value;
   var birthDay = document.getElementById('birthday').value;
@@ -40,4 +45,6 @@ function akanForm() {
       ' and your akan name is ' +
       femaleName;
   }
+
+  formReset();
 }
