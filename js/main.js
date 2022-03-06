@@ -22,4 +22,22 @@ function akanForm() {
   var maleName = akanArray[day][1];
   var femaleName = akanArray[day][2];
   const output = document.getElementById('message');
+
+  if (gender == '') {
+    alert('Please specify a gender');
+  } else if (year >= 2021) {
+    alert('Please give a valid birthday');
+  } else if (gender == 'male') {
+    output.innerHTML =
+      'You were born on a ' +
+      dayOfTheWeek +
+      ' and your akan name is ' +
+      maleName;
+  } else if (gender == 'female') {
+    output.innerHTML =
+      'You were born on a ' +
+      dayOfTheWeek +
+      ' and your akan name is ' +
+      femaleName;
+  }
 }
