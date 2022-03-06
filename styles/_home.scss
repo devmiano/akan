@@ -17,6 +17,26 @@
   }
 }
 
+%title-shared {
+  font-family: base.$playfair;
+  font-weight: 900;
+  font-size: 7rem;
+  line-height: 7rem;
+}
+
+%input-shared {
+  width: 70%;
+  outline: none;
+  border: none;
+  background-color: base.$orange;
+  color: base.$light;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.8rem;
+}
+
 .container {
   background-color: base.$light;
   border-radius: 4px;
@@ -32,22 +52,18 @@
     @include flex;
     flex-direction: column;
     .title {
-      font-family: base.$playfair;
-      font-weight: 900;
-      font-size: 7rem;
-      line-height: 7rem;
+      @extend %title-shared;
       color: base.$brown;
 
       .akan {
-        font-family: base.$playfair;
+        @extend %title-shared;
         color: base.$orange;
       }
       .effect {
-        font-family: base.$playfair;
+        @extend %title-shared;
         color: base.$green;
       }
     }
-
     .text {
       @include body-text;
     }
@@ -86,28 +102,10 @@
           font-size: 1.1rem;
         }
         select {
-          width: 70%;
-          outline: none;
-          border: none;
-          background-color: base.$orange;
-          color: base.$light;
-          font-weight: 500;
-          font-size: 1.1rem;
-          cursor: pointer;
-          border-radius: 4px;
-          padding: 0.8rem;
+          @extend %input-shared;
         }
         input {
-          width: 70%;
-          outline: none;
-          border: none;
-          background-color: base.$orange;
-          color: base.$light;
-          font-weight: 500;
-          font-size: 1.1rem;
-          cursor: pointer;
-          border-radius: 4px;
-          padding: 0.8rem;
+          @extend %input-shared;
         }
       }
 
