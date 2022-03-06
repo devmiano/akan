@@ -1,5 +1,29 @@
 @use 'base';
 
+@mixin for-phone {
+  @media (max-width: 799px) {
+    @content;
+  }
+}
+
+@mixin for-tab {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin for-xl-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
 @mixin flex {
   display: flex;
   justify-content: space-between;
@@ -10,6 +34,16 @@
   font-size: 1.2rem;
   line-height: 1.5rem;
   color: base.$orange;
+
+  @include for-tab {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  @include for-desktop {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
 
   .bold {
     font-weight: 700;
@@ -22,6 +56,16 @@
   font-weight: 900;
   font-size: 7rem;
   line-height: 7rem;
+
+  @include for-tab {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  @include for-desktop {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
 }
 
 %input-shared {
@@ -47,13 +91,40 @@
   padding: 4rem;
   @include flex;
 
+  @include for-phone {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  @include for-tab {
+    width: 80%;
+  }
+
+  @include for-desktop() {
+    width: 70%;
+  }
+
+  @include for-xl-desktop() {
+    width: 60%;
+  }
+
   .left {
     width: 31%;
     @include flex;
     flex-direction: column;
+
+    @include for-phone {
+      width: 100%;
+      padding-bottom: 3rem;
+    }
     .title {
       @extend %title-shared;
       color: base.$brown;
+
+      @include for-phone {
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+      }
 
       .akan {
         @extend %title-shared;
@@ -74,6 +145,11 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
+
+    @include for-phone {
+      width: 100%;
+    }
+
     .content {
       width: 100%;
       .text {
@@ -85,6 +161,7 @@
       width: 100%;
       background-color: base.$pale;
       padding: 1rem 2rem;
+      margin: 2rem;
       border-radius: 4px;
       @include body-text;
     }
