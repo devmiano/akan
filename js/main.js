@@ -12,4 +12,9 @@ function akanForm() {
     ['Friday', 'Kofi', 'Afua'],
     ['Saturday', 'Kwame', 'Ama'],
   ];
+
+  // check for the day of birth from the birthday inputed
+  const d = new Date(birthDay);
+  let day = d.getDay();
+  let year = d.getFullYear();
 }
