@@ -1,5 +1,22 @@
 @use 'base';
 
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin body-text {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: base.$orange;
+
+  .bold {
+    font-weight: 700;
+    color: base.$brown;
+  }
+}
+
 .container {
   background-color: base.$light;
   border-radius: 4px;
@@ -8,14 +25,12 @@
   float: right;
   margin: 2rem;
   padding: 4rem;
-  display: flex;
-  justify-content: space-between;
+  @include flex;
 
   .left {
     width: 31%;
-    display: flex;
+    @include flex;
     flex-direction: column;
-    justify-content: space-between;
     .title {
       font-family: base.$playfair;
       font-weight: 900;
@@ -34,53 +49,28 @@
     }
 
     .text {
-      font-weight: 400;
-      font-size: 1.2rem;
-      line-height: 1.5rem;
-      color: base.$orange;
-
-      .bold {
-        font-weight: 700;
-        color: base.$brown;
-      }
+      @include body-text;
     }
   }
 
   .right {
-    display: flex;
+    @include flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     width: 50%;
     .content {
       width: 100%;
       .text {
-        font-weight: 400;
-        font-size: 1.2rem;
-        line-height: 1.5rem;
-        color: base.$orange;
-
-        .bold {
-          font-weight: 700;
-          color: base.$brown;
-        }
+        @include body-text;
       }
     }
 
     .message {
       width: 100%;
-      font-weight: 400;
-      font-size: 1.2rem;
-      line-height: 1.5rem;
-      color: base.$orange;
       background-color: base.$pale;
       padding: 1rem 2rem;
       border-radius: 4px;
-
-      .bold {
-        color: base.$brown;
-        font-weight: 700;
-      }
+      @include body-text;
     }
 
     .form {
@@ -88,8 +78,7 @@
       width: 100%;
 
       .group {
-        display: flex;
-        justify-content: space-between;
+        @include flex;
         align-items: center;
         label {
           color: base.$brown;
@@ -119,10 +108,6 @@
           cursor: pointer;
           border-radius: 4px;
           padding: 0.8rem;
-
-          &::after {
-            color: base.$light;
-          }
         }
       }
 
