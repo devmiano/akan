@@ -17,4 +17,9 @@ function akanForm() {
   const d = new Date(birthDay);
   let day = d.getDay();
   let year = d.getFullYear();
+
+  var dayOfTheWeek = akanArray[day][0];
+  var maleName = akanArray[day][1];
+  var femaleName = akanArray[day][2];
+  const output = document.getElementById('message');
 }
