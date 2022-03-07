@@ -1,7 +1,7 @@
 // Function to refresh the form after submition
-function formReset() {
-  document.getElementById('form_data').reset();
-}
+// function formReset() {
+//   document.getElementById('form_data').reset();
+// }
 
 function akanForm() {
   var gender = document.getElementById('gender').value;
@@ -46,5 +46,5 @@ function akanForm() {
       femaleName;
   }
 
-  formReset();
+  // formReset();
 }
