@@ -20,7 +20,7 @@ This web application that takes a user's birthday and gender to generate their A
 
 :point_right: Open Terminal {Ctrl+Alt+T}
 
-- `git clone` https://github.com/devmiano/akan.git
+- `git clone https://github.com/devmiano/akan.git`
 
 - `cd akan` to entr the project folder
 
@@ -49,6 +49,7 @@ This web application that takes a user's birthday and gender to generate their A
 - Javascript
 - Sass
 - Markdown
+- Vite
 
 ---
 
