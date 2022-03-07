@@ -20,11 +20,11 @@ This web application that takes a user's birthday and gender to generate their A
 
 :point_right: Open Terminal {Ctrl+Alt+T}
 
-- `git clone https://github.com/devmiano/akan.git`
+- `git clone` https://github.com/devmiano/akan.git
 
-- cd akan
+- `cd akan` to entr the project folder
 
-- code . or atom . based on the text editor you have.
+- `code .` or `atom .` based on the text editor you have.
 
 - `yarn` to install necessary dependencies.
 
@@ -60,4 +60,4 @@ This web application that takes a user's birthday and gender to generate their A
 
 ## Collaborate
 
-To collaborate, reach me on [:email:](devmiano@gmail.com)
+To collaborate, reach me on :email: [Email](devmiano@gmail.com)
